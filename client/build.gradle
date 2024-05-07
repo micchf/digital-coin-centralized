@@ -1,0 +1,15 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+shadowJar {
+    archiveBaseName.set("${project.name}-${project.version}")
+    archiveClassifier.set('')
+    archiveVersion.set('')
+
+    manifest {
+        attributes(
+                'Main-Class': 'me.micch.Client'
+        )
+    }
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'digital-coin-centralized'
+
+include 'client'
+include 'server'
+
