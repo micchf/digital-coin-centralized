@@ -1,8 +1,8 @@
 package me.micch;
 
-public class Client {
+public class BootLoader {
 
     public static void main(String[] args) {
-        System.out.println("prova");
+        Main main = new Main();
     }
 }

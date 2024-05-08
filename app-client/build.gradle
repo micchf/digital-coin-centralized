@@ -1,0 +1,29 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+javafx {
+    version = "22.0.1"
+    modules = [ 'javafx.controls' ]
+}
+
+javafx {
+    version = "22.0.1"
+    modules = [ 'javafx.fxml' ]
+}
+
+project.setProperty("mainClassName", "me.micch.Main")
+
+shadowJar {
+    archiveBaseName.set("${project.name}-${project.version}")
+    archiveClassifier.set('')
+    archiveVersion.set('')
+
+    manifest {
+        attributes(
+                'Main-Class': 'me.micch.Main'
+        )
+    }
+}
